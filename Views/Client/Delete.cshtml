@@ -1,0 +1,97 @@
+﻿@model TechMoveGLMS.Models.Client
+@{
+    ViewData["Title"] = "Delete Client";
+}
+
+<div class="page-header">
+    <h2>Delete <span>Client</span></h2>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card border-danger">
+            <div class="card-header" style="background:#dc3545; color:white;">
+                <i class="fas fa-exclamation-triangle me-2"></i>Confirm Deletion
+            </div>
+            <div class="card-body p-4">
+
+                <table class="table table-borderless mb-3">
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy); width:35%">
+                            <i class="fas fa-user me-2" style="color:var(--gold)"></i>Name
+                        </td>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-envelope me-2" style="color:var(--gold)"></i>Contact
+                        </td>
+                        <td>@Model.ContactDetails</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-globe me-2" style="color:var(--gold)"></i>Region
+                        </td>
+                        <td>@Model.Region</td>
+                    </tr>
+                </table>
+
+                @if (ViewBag.ContractCount > 0)
+                {
+                    <div class="p-3 rounded mb-3"
+                         style="background:rgba(220,53,69,0.08);
+                                    border: 1px solid rgba(220,53,69,0.3)">
+                        <p class="fw-bold mb-2" style="color:#dc3545">
+                            <i class="fas fa-exclamation-circle me-2"></i>
+                            Warning — This will also delete:
+                        </p>
+                        <ul class="mb-0 small text-muted">
+                            <li>
+                                <strong>@ViewBag.ContractCount contract(s)</strong>
+                                linked to this client
+                            </li>
+                            <li>
+                                All <strong>service requests</strong> under those contracts
+                            </li>
+                        </ul>
+
+                        @if (ViewBag.Contracts != null)
+                        {
+                            <div class="mt-2">
+                                @foreach (var contract in ViewBag.Contracts)
+                                {
+                                    <span class="badge me-1 mb-1"
+                                          style="background:var(--navy); color:var(--gold)">
+                                        @contract.ServiceLevel (@contract.Status)
+                                    </span>
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="p-3 rounded mb-3"
+                         style="background:rgba(40,167,69,0.08);
+                                    border:1px solid rgba(40,167,69,0.3)">
+                        <p class="mb-0 small" style="color:#28a745">
+                            <i class="fas fa-check-circle me-2"></i>
+                            This client has no contracts. Safe to delete.
+                        </p>
+                    </div>
+                }
+
+                <p class="text-muted small mb-3">
+                    This action <strong>cannot be undone.</strong>
+                </p>
+
+                <form asp-action="Delete" class="d-flex gap-2">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash me-2"></i>Yes, Delete Everything
+                    </button>
+                    <a asp-action="Index" class="btn btn-navy">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

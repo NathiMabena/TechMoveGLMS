@@ -1,0 +1,78 @@
+﻿@model TechMoveGLMS.Models.ServiceRequest
+@{
+    ViewData["Title"] = "Delete Request";
+}
+
+<div class="page-header">
+    <h2>Delete Service <span>Request</span></h2>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card border-danger">
+            <div class="card-header" style="background:#dc3545; color:white;">
+                <i class="fas fa-exclamation-triangle me-2"></i>Confirm Deletion
+            </div>
+            <div class="card-body p-4">
+
+                <table class="table table-borderless mb-3">
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy); width:35%">
+                            <i class="fas fa-file-contract me-2" style="color:var(--gold)"></i>Contract
+                        </td>
+                        <td>@Model.Contract?.ServiceLevel</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-align-left me-2" style="color:var(--gold)"></i>Description
+                        </td>
+                        <td>@Model.Description</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-dollar-sign me-2" style="color:var(--gold)"></i>Cost (USD)
+                        </td>
+                        <td>$@Model.CostUSD.ToString("F2")</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-coins me-2" style="color:var(--gold)"></i>Cost (ZAR)
+                        </td>
+                        <td>R @Model.CostZAR.ToString("F2")</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-info-circle me-2" style="color:var(--gold)"></i>Status
+                        </td>
+                        <td>
+                            <span class="status-badge @(Model.Status == "Completed" ? "badge-active" :
+                                                                                          Model.Status == "Pending" ? "badge-draft" :
+                                                                                          "badge-onhold")">
+                                @Model.Status
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="p-3 rounded mb-3"
+                     style="background:rgba(220,53,69,0.08);
+                            border: 1px solid rgba(220,53,69,0.3)">
+                    <p class="fw-bold mb-1" style="color:#dc3545">
+                        <i class="fas fa-exclamation-circle me-2"></i>Warning
+                    </p>
+                    <p class="mb-0 small text-muted">
+                        You are about to permanently delete this service request.
+                        This action <strong>cannot be undone.</strong>
+                    </p>
+                </div>
+
+                <form asp-action="Delete" class="d-flex gap-2">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash me-2"></i>Yes, Delete
+                    </button>
+                    <a asp-action="Index" class="btn btn-navy">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

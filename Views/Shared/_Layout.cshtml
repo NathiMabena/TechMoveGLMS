@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] — TechMove GLMS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h4>⚓ TECHM0VE</h4>
+            <small>Global Logistics Management</small>
+        </div>
+
+        <div class="pt-3">
+            <div class="nav-section">Main Menu</div>
+
+            <a class="nav-link" asp-controller="Home" asp-action="Index">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+            </a>
+
+            <div class="nav-section">Management</div>
+
+            <a class="nav-link" asp-controller="Client" asp-action="Index">
+                <i class="fas fa-users"></i> Clients
+            </a>
+
+            <a class="nav-link" asp-controller="Contract" asp-action="Index">
+                <i class="fas fa-file-contract"></i> Contracts
+            </a>
+
+            <a class="nav-link" asp-controller="ServiceRequest" asp-action="Index">
+                <i class="fas fa-concierge-bell"></i> Service Requests
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="top-bar">
+            <h5>@ViewData["Title"]</h5>
+            <span style="color: var(--text-muted); font-size: 0.85rem;">
+                <i class="fas fa-globe"></i> TechMove Logistics — GLMS v1.0
+            </span>
+        </div>
+
+        <div class="page-body">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

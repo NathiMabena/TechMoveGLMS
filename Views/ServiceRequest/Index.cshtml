@@ -1,0 +1,73 @@
+﻿@model IEnumerable<TechMoveGLMS.Models.ServiceRequest>
+@{
+    ViewData["Title"] = "Service Requests";
+}
+
+<div class="page-header">
+    <h2>Service <span>Requests</span></h2>
+    <a asp-action="Create" class="btn btn-gold">
+        <i class="fas fa-plus me-2"></i>New Request
+    </a>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="card">
+        <div class="card-body text-center py-5">
+            <i class="fas fa-concierge-bell fa-3x mb-3" style="color:var(--gold)"></i>
+            <h5 style="color:var(--navy)">No Service Requests Yet</h5>
+            <p class="text-muted">Create your first service request to get started.</p>
+            <a asp-action="Create" class="btn btn-gold">New Request</a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-header navy">
+                        <i class="fas fa-concierge-bell me-2"></i>Request #@item.ServiceRequestId
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-2">
+                            <i class="fas fa-file-contract me-2" style="color:var(--gold)"></i>
+                            <strong>@item.Contract?.ServiceLevel</strong>
+                        </p>
+                        <p class="mb-2 text-muted small">@item.Description</p>
+                        <p class="mb-2">
+                            <i class="fas fa-dollar-sign me-2" style="color:var(--gold)"></i>
+                            $@item.CostUSD.ToString("F2")
+                            <span class="text-muted">→</span>
+                            R @item.CostZAR.ToString("F2")
+                        </p>
+                        <span class="status-badge @(item.Status == "Completed" ? "badge-active" :
+                                                                                  item.Status == "Pending" ? "badge-draft" : "badge-onhold")">
+                    @item.Status
+                </span>
+            </div>
+            <div class="card-footer bg-white d-flex gap-2">
+                <a asp-action="Details" asp-route-id="@item.ServiceRequestId"
+                   class="btn btn-sm btn-navy">
+                    <i class="fas fa-eye me-1"></i>Details
+                </a>
+                
+                   
+                    <a asp-action="Edit" asp-route-id="@item.ServiceRequestId"
+                       class="btn btn-sm btn-gold">
+                        <i class="fas fa-edit me-1"></i>Edit
+                    </a>
+                   
+               
+                <a asp-action="Delete" asp-route-id="@item.ServiceRequestId"
+                   class="btn btn-sm btn-danger">
+                    <i class="fas fa-trash me-1"></i>Delete
+                </a>
+            </div>
+        </div>
+    </div>
+        }
+    </div>
+}

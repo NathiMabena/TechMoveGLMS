@@ -1,0 +1,878 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{59A67956-D8F6-420E-BB90-0CAFCA1EFC28}|..\\TechMoveGLMS.Tests\\TechMoveGLMS.Tests.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms.tests\\services\\workflowvalidationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A67956-D8F6-420E-BB90-0CAFCA1EFC28}|..\\TechMoveGLMS.Tests\\TechMoveGLMS.Tests.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms.tests\\services\\filevalidationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A67956-D8F6-420E-BB90-0CAFCA1EFC28}|..\\TechMoveGLMS.Tests\\TechMoveGLMS.Tests.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms.tests\\services\\factorypatterntests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A67956-D8F6-420E-BB90-0CAFCA1EFC28}|..\\TechMoveGLMS.Tests\\TechMoveGLMS.Tests.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms.tests\\services\\currencycalculationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\techmoveglms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:techmoveglms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\servicerequest\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\servicerequest\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\contract\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\contract\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\client\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\client\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\controllers\\contractcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:controllers\\contractcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\servicerequest\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\servicerequest\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\contract\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\contract\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\servicerequest\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\servicerequest\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\servicerequest\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\servicerequest\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\contract\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\contract\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\client\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\client\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\client\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\client\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\client\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\client\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\controllers\\servicerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:controllers\\servicerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\contract\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\contract\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\servicerequest\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\servicerequest\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\contract\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\contract\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\services\\currencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:services\\currencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\services\\servicerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:services\\servicerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\services\\contractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:services\\contractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\services\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:services\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\services\\interfaces\\icurrencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:services\\interfaces\\icurrencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\services\\interfaces\\iservicerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:services\\interfaces\\iservicerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\services\\interfaces\\icontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:services\\interfaces\\icontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\services\\interfaces\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:services\\interfaces\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\patterns\\standardfreightpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:patterns\\standardfreightpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\patterns\\standardrequestfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:patterns\\standardrequestfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\patterns\\servicerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:patterns\\servicerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\patterns\\ipricingstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:patterns\\ipricingstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\patterns\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:patterns\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\patterns\\expeditedairpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:patterns\\expeditedairpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\patterns\\iservicerequestfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:patterns\\iservicerequestfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\migrations\\20260514143844_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:migrations\\20260514143844_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|c:\\users\\nathi\\source\\repos\\techmoveglms\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32EBF37-65CF-4653-AE5B-E992FB3C70AB}|TechMoveGLMS.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FactoryPatternTests.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS.Tests\\Services\\FactoryPatternTests.cs",
+              "RelativeDocumentMoniker": "..\\TechMoveGLMS.Tests\\Services\\FactoryPatternTests.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS.Tests\\Services\\FactoryPatternTests.cs",
+              "RelativeToolTip": "..\\TechMoveGLMS.Tests\\Services\\FactoryPatternTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:28:04.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkflowValidationTests.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS.Tests\\Services\\WorkflowValidationTests.cs",
+              "RelativeDocumentMoniker": "..\\TechMoveGLMS.Tests\\Services\\WorkflowValidationTests.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS.Tests\\Services\\WorkflowValidationTests.cs",
+              "RelativeToolTip": "..\\TechMoveGLMS.Tests\\Services\\WorkflowValidationTests.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAADwv6kAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:27:23.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileValidationTests.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS.Tests\\Services\\FileValidationTests.cs",
+              "RelativeDocumentMoniker": "..\\TechMoveGLMS.Tests\\Services\\FileValidationTests.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS.Tests\\Services\\FileValidationTests.cs",
+              "RelativeToolTip": "..\\TechMoveGLMS.Tests\\Services\\FileValidationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:26:28.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CurrencyCalculationTests.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS.Tests\\Services\\CurrencyCalculationTests.cs",
+              "RelativeDocumentMoniker": "..\\TechMoveGLMS.Tests\\Services\\CurrencyCalculationTests.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS.Tests\\Services\\CurrencyCalculationTests.cs",
+              "RelativeToolTip": "..\\TechMoveGLMS.Tests\\Services\\CurrencyCalculationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:23:35.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:20:13.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contract\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Contract\\Edit.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAIwGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:50:46.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAIwEUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-17T00:33:18.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ContractController.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Controllers\\ContractController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContractController.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Controllers\\ContractController.cs",
+              "RelativeToolTip": "Controllers\\ContractController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAADwv2oAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T23:22:49.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T10:50:29.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Controllers\\ClientController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwGEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T23:22:21.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Contract.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Models\\Contract.cs",
+              "RelativeDocumentMoniker": "Models\\Contract.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Models\\Contract.cs",
+              "RelativeToolTip": "Models\\Contract.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T20:59:21.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\ServiceRequest\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Delete.cshtml",
+              "RelativeToolTip": "Views\\ServiceRequest\\Delete.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwE0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:56:43.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAIABAAAAAAAAAAAAAIcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-17T00:32:14.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TechMoveGLMS.csproj",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\TechMoveGLMS.csproj",
+              "RelativeDocumentMoniker": "TechMoveGLMS.csproj",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\TechMoveGLMS.csproj",
+              "RelativeToolTip": "TechMoveGLMS.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-13T20:58:58.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contract\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Contract\\Delete.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAIwEgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:49:25.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Client\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Client\\Delete.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAIwGAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:44:58.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ServiceRequest\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ServiceRequest\\Edit.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAIwJgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:58:00.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ServiceRequest\\Details.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Details.cshtml",
+              "RelativeToolTip": "Views\\ServiceRequest\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:57:27.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ServiceRequest\\Create.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Create.cshtml",
+              "RelativeToolTip": "Views\\ServiceRequest\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:56:06.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contract\\Create.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Create.cshtml",
+              "RelativeToolTip": "Views\\Contract\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:48:32.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Client\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Index.cshtml",
+              "RelativeToolTip": "Views\\Client\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:41:28.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Client\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Client\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:46:38.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Client\\Details.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Details.cshtml",
+              "RelativeToolTip": "Views\\Client\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:45:41.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Client\\Create.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Client\\Create.cshtml",
+              "RelativeToolTip": "Views\\Client\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:42:50.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "Models\\Client.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Models\\Client.cs",
+              "RelativeToolTip": "Models\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T20:59:14.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ServiceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Models\\ServiceRequest.cs",
+              "RelativeDocumentMoniker": "Models\\ServiceRequest.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Models\\ServiceRequest.cs",
+              "RelativeToolTip": "Models\\ServiceRequest.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T20:59:22.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ServiceRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Controllers\\ServiceRequestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ServiceRequestController.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Controllers\\ServiceRequestController.cs",
+              "RelativeToolTip": "Controllers\\ServiceRequestController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAswIEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T23:23:45.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contract\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Index.cshtml",
+              "RelativeToolTip": "Views\\Contract\\Index.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAIwH0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:47:33.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ServiceRequest\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\ServiceRequest\\Index.cshtml",
+              "RelativeToolTip": "Views\\ServiceRequest\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAIwDwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:53:55.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contract\\Details.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Contract\\Details.cshtml",
+              "RelativeToolTip": "Views\\Contract\\Details.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAIwGkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T23:50:09.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwD4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-17T00:32:53.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CurrencyService.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\CurrencyService.cs",
+              "RelativeDocumentMoniker": "Services\\CurrencyService.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\CurrencyService.cs",
+              "RelativeToolTip": "Services\\CurrencyService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAIBJwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T23:28:21.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ClientService.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\ClientService.cs",
+              "RelativeDocumentMoniker": "Services\\ClientService.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\ClientService.cs",
+              "RelativeToolTip": "Services\\ClientService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T15:03:36.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ContractService.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\ContractService.cs",
+              "RelativeDocumentMoniker": "Services\\ContractService.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\ContractService.cs",
+              "RelativeToolTip": "Services\\ContractService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T15:03:52.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ServiceRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\ServiceRequestService.cs",
+              "RelativeDocumentMoniker": "Services\\ServiceRequestService.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\ServiceRequestService.cs",
+              "RelativeToolTip": "Services\\ServiceRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T15:10:36.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ICurrencyService.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\Interfaces\\ICurrencyService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ICurrencyService.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\Interfaces\\ICurrencyService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ICurrencyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T23:27:18.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IContractService.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\Interfaces\\IContractService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IContractService.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\Interfaces\\IContractService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IContractService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T15:03:02.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IClientService.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\Interfaces\\IClientService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IClientService.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\Interfaces\\IClientService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IClientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T15:02:42.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IServiceRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\Interfaces\\IServiceRequestService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IServiceRequestService.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Services\\Interfaces\\IServiceRequestService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IServiceRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T15:03:19.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "StandardFreightPricing.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\StandardFreightPricing.cs",
+              "RelativeDocumentMoniker": "Patterns\\StandardFreightPricing.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\StandardFreightPricing.cs",
+              "RelativeToolTip": "Patterns\\StandardFreightPricing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:54:41.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "StandardRequestFactory.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\StandardRequestFactory.cs",
+              "RelativeDocumentMoniker": "Patterns\\StandardRequestFactory.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\StandardRequestFactory.cs",
+              "RelativeToolTip": "Patterns\\StandardRequestFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:58:06.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ServiceRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\ServiceRequestValidator.cs",
+              "RelativeDocumentMoniker": "Patterns\\ServiceRequestValidator.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\ServiceRequestValidator.cs",
+              "RelativeToolTip": "Patterns\\ServiceRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T15:00:16.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IPricingStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\IPricingStrategy.cs",
+              "RelativeDocumentMoniker": "Patterns\\IPricingStrategy.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\IPricingStrategy.cs",
+              "RelativeToolTip": "Patterns\\IPricingStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:52:45.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "IObserver.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\IObserver.cs",
+              "RelativeDocumentMoniker": "Patterns\\IObserver.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\IObserver.cs",
+              "RelativeToolTip": "Patterns\\IObserver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T15:00:00.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ExpeditedAirPricing.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\ExpeditedAirPricing.cs",
+              "RelativeDocumentMoniker": "Patterns\\ExpeditedAirPricing.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\ExpeditedAirPricing.cs",
+              "RelativeToolTip": "Patterns\\ExpeditedAirPricing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:55:36.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IServiceRequestFactory.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\IServiceRequestFactory.cs",
+              "RelativeDocumentMoniker": "Patterns\\IServiceRequestFactory.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Patterns\\IServiceRequestFactory.cs",
+              "RelativeToolTip": "Patterns\\IServiceRequestFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:57:50.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "20260514143844_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Migrations\\20260514143844_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260514143844_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Migrations\\20260514143844_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20260514143844_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:38:45.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-14T14:21:17.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:19:09.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T20:59:18.013Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

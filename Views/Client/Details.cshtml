@@ -1,0 +1,56 @@
+﻿@model TechMoveGLMS.Models.Client
+@{
+    ViewData["Title"] = "Client Details";
+}
+
+<div class="page-header">
+    <h2>Client <span>Details</span></h2>
+    <a asp-action="Index" class="btn btn-navy">
+        <i class="fas fa-arrow-left me-2"></i>Back to Clients
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header navy">
+                <i class="fas fa-user me-2"></i>@Model.Name
+            </div>
+            <div class="card-body p-4">
+                <table class="table table-borderless">
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy); width:40%">
+                            <i class="fas fa-id-card me-2" style="color:var(--gold)"></i>Client ID
+                        </td>
+                        <td>@Model.ClientId</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-user me-2" style="color:var(--gold)"></i>Name
+                        </td>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-envelope me-2" style="color:var(--gold)"></i>Contact
+                        </td>
+                        <td>@Model.ContactDetails</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" style="color:var(--navy)">
+                            <i class="fas fa-globe me-2" style="color:var(--gold)"></i>Region
+                        </td>
+                        <td>@Model.Region</td>
+                    </tr>
+                </table>
+
+                <div class="d-flex gap-2 mt-3">
+                    <a asp-action="Edit" asp-route-id="@Model.ClientId" class="btn btn-gold">
+                        <i class="fas fa-edit me-2"></i>Edit
+                    </a>
+                    <a asp-action="Index" class="btn btn-navy">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
