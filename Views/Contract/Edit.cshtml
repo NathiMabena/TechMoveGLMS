@@ -34,12 +34,14 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label asp-for="StartDate" class="form-label">Start Date</label>
-                            <input asp-for="StartDate" class="form-control" type="date" />
+                            <input asp-for="StartDate" id="StartDate"
+                                   class="form-control" type="date" />
                             <span asp-validation-for="StartDate" class="text-danger small"></span>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label asp-for="EndDate" class="form-label">End Date</label>
-                            <input asp-for="EndDate" class="form-control" type="date" />
+                            <input asp-for="EndDate" id="EndDate"
+                                   class="form-control" type="date" />
                             <span asp-validation-for="EndDate" class="text-danger small"></span>
                         </div>
                     </div>
@@ -57,7 +59,12 @@
 
                     <div class="mb-3">
                         <label asp-for="ServiceLevel" class="form-label">Service Level</label>
-                        <input asp-for="ServiceLevel" class="form-control" />
+                        <select asp-for="ServiceLevel" class="form-control">
+                            <option value="">-- Select Service Level --</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Enterprise">Enterprise</option>
+                        </select>
                         <span asp-validation-for="ServiceLevel" class="text-danger small"></span>
                     </div>
 
@@ -84,7 +91,8 @@
                                    class="form-control" accept=".pdf" />
                             <small class="text-muted mt-2 d-block">
                                 <i class="fas fa-info-circle me-1" style="color:var(--gold)"></i>
-                                Upload a new PDF to replace the existing one. Leave empty to keep current.
+                                Upload a new PDF to replace the existing one.
+                                Leave empty to keep current.
                             </small>
                         </div>
                     </div>
@@ -105,4 +113,26 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        // When start date changes update end date minimum
+        document.getElementById('StartDate').addEventListener('change', function () {
+            var startDate = this.value;
+            var endDateInput = document.getElementById('EndDate');
+            endDateInput.min = startDate;
+
+            if (endDateInput.value && endDateInput.value < startDate) {
+                endDateInput.value = '';
+                alert('End date has been cleared because it was before the new start date.');
+            }
+        });
+
+        // When end date changes validate against start date
+        document.getElementById('EndDate').addEventListener('change', function () {
+            var startDate = document.getElementById('StartDate').value;
+            if (startDate && this.value <= startDate) {
+                alert('End date must be after start date!');
+                this.value = '';
+            }
+        });
+    </script>
 }

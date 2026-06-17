@@ -1,0 +1,44 @@
+services:
+  sql-server-db:
+    container_name: sql-server-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=TechMove@2026!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+
+  glms-backend-api:
+    container_name: glms-backend-api
+    build:
+      context: ..
+      dockerfile: TechMoveGLMS.API/Dockerfile
+    ports:
+      - "7222:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql-server-db;Database=TechMoveGLMS;User Id=sa;Password=TechMove@2026!;TrustServerCertificate=True;
+      - Jwt__Key=TechMoveGLMS_SuperSecretKey_2026_Enterprise
+      - Jwt__Issuer=TechMoveGLMS.API
+      - Jwt__Audience=TechMoveGLMS.Client
+    depends_on:
+      - sql-server-db
+
+  glms-frontend-web:
+    container_name: glms-frontend-web
+    build:
+      context: ..
+      dockerfile: TechMoveGLMS/Dockerfile
+    ports:
+      - "7039:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ApiSettings__BaseUrl=http://glms-backend-api:8080/
+    depends_on:
+      - glms-backend-api
+
+volumes:
+  sqldata:

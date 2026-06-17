@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "TechMoveGLMS.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\TechMoveGLMS.API\\TechMoveGLMS.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

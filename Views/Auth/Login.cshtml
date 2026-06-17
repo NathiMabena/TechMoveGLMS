@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechMove GLMS — Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body {
+            background: linear-gradient(135deg, #0a1628 0%, #112240 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .login-brand {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .login-brand h2 {
+            color: #0a1628;
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+        .login-brand h2 span { color: #c9a84c; }
+        .login-brand p {
+            color: #8892a4;
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        .btn-gold {
+            background-color: #c9a84c;
+            color: #0a1628;
+            border: none;
+            font-weight: 700;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1rem;
+        }
+        .btn-gold:hover {
+            background-color: #e8c97a;
+            color: #0a1628;
+        }
+        .form-control:focus {
+            border-color: #c9a84c;
+            box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+        }
+        .form-label {
+            font-weight: 600;
+            color: #0a1628;
+            font-size: 0.85rem;
+        }
+        .default-creds {
+            background: rgba(201,168,76,0.1);
+            border: 1px solid rgba(201,168,76,0.3);
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8892a4;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-brand">
+            <h2>⚓ TECH<span>M0VE</span></h2>
+            <p>Global Logistics Management System</p>
+        </div>
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-circle me-2"></i>@ViewBag.Error
+            </div>
+        }
+
+        <form method="post" asp-action="Login" asp-controller="Auth">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" class="form-control"
+                       placeholder="Enter username" required />
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control"
+                       placeholder="Enter password" required />
+            </div>
+
+            <button type="submit" class="btn btn-gold w-100">
+                <i class="fas fa-sign-in-alt me-2"></i>Sign In
+            </button>
+        </form>
+
+        <div class="default-creds">
+            <i class="fas fa-info-circle me-1" style="color:#c9a84c"></i>
+            Default credentials: <strong>admin</strong> / <strong>password123</strong>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

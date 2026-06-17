@@ -1,98 +1,172 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Text;
 using TechMoveGLMS.Models;
-using TechMoveGLMS.Services.Interfaces;
 
 namespace TechMoveGLMS.Controllers
 {
     public class ClientController : Controller
     {
-        private readonly IClientService _clientService;
-        private readonly IContractService _contractService;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public ClientController(IClientService clientService, IContractService contractService)
+        public ClientController(IHttpClientFactory httpClientFactory)
         {
-            _clientService = clientService;
-            _contractService = contractService;
+            _httpClientFactory = httpClientFactory;
         }
 
-        // LIST all clients
+        // GET: /Client
         public async Task<IActionResult> Index()
         {
-            var clients = await _clientService.GetAllClientsAsync();
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            var response = await client.GetAsync("api/client");
+            IEnumerable<Client> clients = new List<Client>();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                clients = JsonConvert.DeserializeObject<IEnumerable<Client>>(jsonString)
+                    ?? new List<Client>();
+            }
+
             return View(clients);
         }
 
-        // SHOW create form
+        // GET: /Client/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // HANDLE create form submission
+        // POST: /Client/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Client client)
+        public async Task<IActionResult> Create(Client clientModel)
         {
             if (ModelState.IsValid)
             {
-                await _clientService.AddClientAsync(client);
-                return RedirectToAction(nameof(Index));
+                var client = _httpClientFactory.CreateClient("GlmsApi");
+                AddJwtHeader(client);
+
+                var json = JsonConvert.SerializeObject(clientModel);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync("api/client", content);
+
+                if (response.IsSuccessStatusCode)
+                    return RedirectToAction(nameof(Index));
+
+                ModelState.AddModelError("", "Failed to create client via API.");
             }
-            return View(client);
+
+            return View(clientModel);
         }
 
-        // SHOW edit form
+        // GET: /Client/Edit/{id}
         public async Task<IActionResult> Edit(int id)
         {
-            var client = await _clientService.GetClientByIdAsync(id);
-            if (client == null) return NotFound();
-            return View(client);
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            var response = await client.GetAsync($"api/client/{id}");
+            if (!response.IsSuccessStatusCode) return NotFound();
+
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var clientModel = JsonConvert.DeserializeObject<Client>(jsonString);
+
+            return View(clientModel);
         }
 
-        // HANDLE edit form submission
+        // POST: /Client/Edit/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Client client)
+        public async Task<IActionResult> Edit(int id, Client clientModel)
         {
-            if (id != client.ClientId) return NotFound();
+            if (id != clientModel.ClientId) return NotFound();
 
             if (ModelState.IsValid)
             {
-                await _clientService.UpdateClientAsync(client);
-                return RedirectToAction(nameof(Index));
+                var client = _httpClientFactory.CreateClient("GlmsApi");
+                AddJwtHeader(client);
+
+                var json = JsonConvert.SerializeObject(clientModel);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await client.PutAsync($"api/client/{id}", content);
+
+                if (response.IsSuccessStatusCode)
+                    return RedirectToAction(nameof(Index));
+
+                ModelState.AddModelError("", "Failed to update client via API.");
             }
-            return View(client);
+
+            return View(clientModel);
         }
 
-        // SHOW delete confirmation with warning
+        // GET: /Client/Delete/{id}
         public async Task<IActionResult> Delete(int id)
         {
-            var client = await _clientService.GetClientByIdAsync(id);
-            if (client == null) return NotFound();
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
 
-            var contracts = await _contractService.GetAllContractsAsync();
-            var clientContracts = contracts.Where(c => c.ClientId == id).ToList();
-            ViewBag.ContractCount = clientContracts.Count;
-            ViewBag.Contracts = clientContracts;
+            var response = await client.GetAsync($"api/client/{id}");
+            if (!response.IsSuccessStatusCode) return NotFound();
 
-            return View(client);
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var clientModel = JsonConvert.DeserializeObject<Client>(jsonString);
+
+            // Get contracts for warning
+            var contractsResponse = await client.GetAsync("api/contract");
+            if (contractsResponse.IsSuccessStatusCode)
+            {
+                var contractsJson = await contractsResponse.Content.ReadAsStringAsync();
+                var allContracts = JsonConvert.DeserializeObject<IEnumerable<Contract>>(
+                    contractsJson) ?? new List<Contract>();
+                var clientContracts = allContracts
+                    .Where(c => c.ClientId == id).ToList();
+                ViewBag.ContractCount = clientContracts.Count;
+                ViewBag.Contracts = clientContracts;
+            }
+
+            return View(clientModel);
         }
 
-        // HANDLE delete confirmation
+        // POST: /Client/Delete/{id}
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _clientService.DeleteClientAsync(id);
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            await client.DeleteAsync($"api/client/{id}");
             return RedirectToAction(nameof(Index));
         }
 
-        // SHOW details
+        // GET: /Client/Details/{id}
         public async Task<IActionResult> Details(int id)
         {
-            var client = await _clientService.GetClientByIdAsync(id);
-            if (client == null) return NotFound();
-            return View(client);
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            var response = await client.GetAsync($"api/client/{id}");
+            if (!response.IsSuccessStatusCode) return NotFound();
+
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var clientModel = JsonConvert.DeserializeObject<Client>(jsonString);
+
+            return View(clientModel);
+        }
+
+        // Helper - adds JWT token to every API request
+        private void AddJwtHeader(HttpClient client)
+        {
+            var token = HttpContext.Session.GetString("JwtToken");
+            if (!string.IsNullOrEmpty(token))
+                client.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue(
+                        "Bearer", token);
         }
     }
 }

@@ -1,154 +1,248 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
+using System.Text;
 using TechMoveGLMS.Models;
-using TechMoveGLMS.Services.Interfaces;
 
 namespace TechMoveGLMS.Controllers
 {
     public class ContractController : Controller
     {
-        private readonly IContractService _contractService;
-        private readonly IClientService _clientService;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public ContractController(IContractService contractService, IClientService clientService)
+        public ContractController(IHttpClientFactory httpClientFactory)
         {
-            _contractService = contractService;
-            _clientService = clientService;
+            _httpClientFactory = httpClientFactory;
         }
 
-        // LIST all contracts with search/filter
+        // GET: /Contract
         public async Task<IActionResult> Index(string? status, DateTime? startDate, DateTime? endDate)
         {
-            var contracts = await _contractService.SearchContractsAsync(status, startDate, endDate);
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
 
-            // Pass filter values back to view
+            string requestUrl = "api/contract";
+            if (!string.IsNullOrEmpty(status))
+            {
+                requestUrl += $"?statusFilter={status}";
+            }
+
+            var response = await client.GetAsync(requestUrl);
+            IEnumerable<Contract> contracts = new List<Contract>();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                contracts = JsonConvert.DeserializeObject<IEnumerable<Contract>>(jsonString) ?? new List<Contract>();
+            }
+
             ViewBag.SelectedStatus = status;
             ViewBag.StartDate = startDate?.ToString("yyyy-MM-dd");
             ViewBag.EndDate = endDate?.ToString("yyyy-MM-dd");
-            ViewBag.Statuses = new SelectList(new[]
-            {
-                "Draft", "Active", "Expired", "On Hold"
-            });
+            ViewBag.Statuses = new SelectList(new[] { "Draft", "Active", "Expired", "On Hold" });
 
             return View(contracts);
         }
 
-        // SHOW create form
+        // GET: /Contract/Create
         public async Task<IActionResult> Create()
         {
             await PopulateClientsDropdown();
             return View();
         }
 
-        // HANDLE create form submission with PDF upload
+        // POST: /Contract/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Contract contract, IFormFile? signedAgreement)
+        public async Task<IActionResult> Create(Contract contractModel, IFormFile? signedAgreement)
         {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    await _contractService.AddContractAsync(contract, signedAgreement);
-                    return RedirectToAction(nameof(Index));
-                }
-                catch (InvalidOperationException ex)
-                {
-                    // This catches our "PDF only" validation error
-                    ModelState.AddModelError("", ex.Message);
-                }
-            }
-
-            await PopulateClientsDropdown();
-            return View(contract);
-        }
-
-        // SHOW edit form
-        public async Task<IActionResult> Edit(int id)
-        {
-            var contract = await _contractService.GetContractByIdAsync(id);
-            if (contract == null) return NotFound();
-            await PopulateClientsDropdown();
-            return View(contract);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Contract contract, IFormFile? signedAgreement)
-        {
-            if (id != contract.ContractId) return NotFound();
+            ModelState.Remove("signedAgreement");
 
             if (ModelState.IsValid)
             {
-                // If new PDF uploaded, process it
+                // Handle PDF upload locally
                 if (signedAgreement != null && signedAgreement.Length > 0)
                 {
-                    try
+                    var extension = Path.GetExtension(signedAgreement.FileName).ToLower();
+                    if (extension != ".pdf")
                     {
-                        await _contractService.AddContractAsync(contract, signedAgreement);
-                    }
-                    catch (InvalidOperationException ex)
-                    {
-                        ModelState.AddModelError("", ex.Message);
+                        ModelState.AddModelError("", "Only PDF files are allowed.");
                         await PopulateClientsDropdown();
-                        return View(contract);
+                        return View(contractModel);
                     }
-                }
-                else
-                {
-                    await _contractService.UpdateContractAsync(contract);
+
+                    var uniqueFileName = Guid.NewGuid().ToString() + ".pdf";
+                    var uploadFolder = Path.Combine(
+                        Directory.GetCurrentDirectory(), "wwwroot", "uploads", "agreements");
+                    Directory.CreateDirectory(uploadFolder);
+                    var filePath = Path.Combine(uploadFolder, uniqueFileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await signedAgreement.CopyToAsync(stream);
+                    }
+
+                    contractModel.SignedAgreementPath = $"/uploads/agreements/{uniqueFileName}";
                 }
 
-                return RedirectToAction(nameof(Index));
+                var client = _httpClientFactory.CreateClient("GlmsApi");
+                AddJwtHeader(client);
+
+                var json = JsonConvert.SerializeObject(contractModel);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync("api/contract", content);
+
+                if (response.IsSuccessStatusCode)
+                    return RedirectToAction(nameof(Index));
+
+                ModelState.AddModelError("", "Failed to create contract via API.");
             }
 
             await PopulateClientsDropdown();
-            return View(contract);
+            return View(contractModel);
         }
 
-        // SHOW delete confirmation
+        // GET: /Contract/Edit/{id}
+        public async Task<IActionResult> Edit(int id)
+        {
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            var response = await client.GetAsync($"api/contract/{id}");
+            if (!response.IsSuccessStatusCode) return NotFound();
+
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var contractModel = JsonConvert.DeserializeObject<Contract>(jsonString);
+
+            await PopulateClientsDropdown();
+            return View(contractModel);
+        }
+
+        // POST: /Contract/Edit/{id}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Contract contractModel, IFormFile? signedAgreement)
+        {
+            if (id != contractModel.ContractId) return NotFound();
+            ModelState.Remove("signedAgreement");
+
+            if (ModelState.IsValid)
+            {
+                // Handle new PDF if uploaded locally
+                if (signedAgreement != null && signedAgreement.Length > 0)
+                {
+                    var extension = Path.GetExtension(signedAgreement.FileName).ToLower();
+                    if (extension != ".pdf")
+                    {
+                        ModelState.AddModelError("", "Only PDF files are allowed.");
+                        await PopulateClientsDropdown();
+                        return View(contractModel);
+                    }
+
+                    var uniqueFileName = Guid.NewGuid().ToString() + ".pdf";
+                    var uploadFolder = Path.Combine(
+                        Directory.GetCurrentDirectory(), "wwwroot", "uploads", "agreements");
+                    Directory.CreateDirectory(uploadFolder);
+                    var filePath = Path.Combine(uploadFolder, uniqueFileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await signedAgreement.CopyToAsync(stream);
+                    }
+
+                    contractModel.SignedAgreementPath = $"/uploads/agreements/{uniqueFileName}";
+                }
+
+                var client = _httpClientFactory.CreateClient("GlmsApi");
+                AddJwtHeader(client);
+
+                // Use PUT to update all contract fields
+                var json = JsonConvert.SerializeObject(contractModel);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PutAsync($"api/contract/{id}", content);
+
+                if (response.IsSuccessStatusCode)
+                    return RedirectToAction(nameof(Index));
+
+                ModelState.AddModelError("", "Failed to update contract via API.");
+            }
+
+            await PopulateClientsDropdown();
+            return View(contractModel);
+        }
+
+        // GET: /Contract/Delete/{id}
         public async Task<IActionResult> Delete(int id)
         {
-            var contract = await _contractService.GetContractByIdAsync(id);
-            if (contract == null) return NotFound();
-            return View(contract);
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            var response = await client.GetAsync($"api/contract/{id}");
+            if (!response.IsSuccessStatusCode) return NotFound();
+
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var contractModel = JsonConvert.DeserializeObject<Contract>(jsonString);
+
+            return View(contractModel);
         }
 
-        // HANDLE delete
+        // POST: /Contract/Delete/{id}
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _contractService.DeleteContractAsync(id);
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            // Ensure your API actually has a DELETE endpoint!
+            await client.DeleteAsync($"api/contract/{id}");
             return RedirectToAction(nameof(Index));
         }
 
-        // SHOW details
+        // GET: /Contract/Details/{id}
         public async Task<IActionResult> Details(int id)
         {
-            var contract = await _contractService.GetContractByIdAsync(id);
-            if (contract == null) return NotFound();
-            return View(contract);
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            var response = await client.GetAsync($"api/contract/{id}");
+            if (!response.IsSuccessStatusCode) return NotFound();
+
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var contractModel = JsonConvert.DeserializeObject<Contract>(jsonString);
+
+            return View(contractModel);
         }
 
-        // DOWNLOAD signed agreement PDF
         public IActionResult Download(string filePath)
         {
             if (string.IsNullOrEmpty(filePath)) return NotFound();
-
             var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", filePath.TrimStart('/'));
-
             if (!System.IO.File.Exists(fullPath)) return NotFound();
-
             var fileBytes = System.IO.File.ReadAllBytes(fullPath);
             return File(fileBytes, "application/pdf", Path.GetFileName(fullPath));
         }
 
-        // Helper to populate clients dropdown
         private async Task PopulateClientsDropdown()
         {
-            var clients = await _clientService.GetAllClientsAsync();
-            ViewBag.Clients = new SelectList(clients, "ClientId", "Name");
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            AddJwtHeader(client);
+
+            var response = await client.GetAsync("api/client");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                var clients = JsonConvert.DeserializeObject<IEnumerable<Client>>(jsonString) ?? new List<Client>();
+                ViewBag.Clients = new SelectList(clients, "ClientId", "Name");
+            }
+        }
+
+        private void AddJwtHeader(HttpClient client)
+        {
+            var token = HttpContext.Session.GetString("JwtToken");
+            if (!string.IsNullOrEmpty(token))
+                client.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
         }
     }
 }

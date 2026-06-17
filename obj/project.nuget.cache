@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A9Z5X1TGzQk=",
+  "dgSpecHash": "IQbuR9CgK7U=",
   "success": true,
   "projectFilePath": "C:\\Users\\nathi\\source\\repos\\TechMoveGLMS\\TechMoveGLMS.csproj",
   "expectedPackageFiles": [
@@ -80,6 +80,7 @@
     "C:\\Users\\nathi\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.27\\microsoft.entityframeworkcore.abstractions.8.0.27.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.27\\microsoft.entityframeworkcore.analyzers.8.0.27.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.27\\microsoft.entityframeworkcore.design.8.0.27.nupkg.sha512",
+    "C:\\Users\\nathi\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.27\\microsoft.entityframeworkcore.inmemory.8.0.27.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.27\\microsoft.entityframeworkcore.relational.8.0.27.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.27\\microsoft.entityframeworkcore.sqlserver.8.0.27.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.27\\microsoft.entityframeworkcore.tools.8.0.27.nupkg.sha512",
@@ -113,7 +114,7 @@
     "C:\\Users\\nathi\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\8.0.23\\microsoft.visualstudio.web.codegeneration.utils.8.0.23.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\8.0.23\\microsoft.visualstudio.web.codegenerators.mvc.8.0.23.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\mono.texttemplating\\2.3.1\\mono.texttemplating.2.3.1.nupkg.sha512",
-    "C:\\Users\\nathi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\nathi\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\nuget.common\\6.11.0\\nuget.common.6.11.0.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\nuget.configuration\\6.11.0\\nuget.configuration.6.11.0.nupkg.sha512",
     "C:\\Users\\nathi\\.nuget\\packages\\nuget.dependencyresolver.core\\6.11.0\\nuget.dependencyresolver.core.6.11.0.nupkg.sha512",

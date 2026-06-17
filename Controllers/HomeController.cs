@@ -1,33 +1,69 @@
 using Microsoft.AspNetCore.Mvc;
-using TechMoveGLMS.Services.Interfaces;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using TechMoveGLMS.Models;
 
 namespace TechMoveGLMS.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IClientService _clientService;
-        private readonly IContractService _contractService;
-        private readonly IServiceRequestService _srService;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public HomeController(
-            IClientService clientService,
-            IContractService contractService,
-            IServiceRequestService srService)
+        public HomeController(IHttpClientFactory httpClientFactory)
         {
-            _clientService = clientService;
-            _contractService = contractService;
-            _srService = srService;
+            _httpClientFactory = httpClientFactory;
         }
 
         public async Task<IActionResult> Index()
         {
-            var clients = await _clientService.GetAllClientsAsync();
-            var contracts = await _contractService.GetAllContractsAsync();
-            var requests = await _srService.GetAllAsync();
+            var client = _httpClientFactory.CreateClient("GlmsApi");
+            var token = HttpContext.Session.GetString("JwtToken");
+            if (!string.IsNullOrEmpty(token))
+                client.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue(
+                        "Bearer", token);
 
-            ViewBag.TotalClients = clients.Count();
-            ViewBag.ActiveContracts = contracts.Count(c => c.Status == "Active");
-            ViewBag.TotalRequests = requests.Count();
+            try
+            {
+                var clientsResponse = await client.GetAsync("api/client");
+                var contractsResponse = await client.GetAsync("api/contract");
+                var requestsResponse = await client.GetAsync("api/servicerequest");
+
+                int totalClients = 0;
+                int activeContracts = 0;
+                int totalRequests = 0;
+
+                if (clientsResponse.IsSuccessStatusCode)
+                {
+                    var json = await clientsResponse.Content.ReadAsStringAsync();
+                    var clients = JsonConvert.DeserializeObject<IEnumerable<Client>>(json);
+                    totalClients = clients?.Count() ?? 0;
+                }
+
+                if (contractsResponse.IsSuccessStatusCode)
+                {
+                    var json = await contractsResponse.Content.ReadAsStringAsync();
+                    var contracts = JsonConvert.DeserializeObject<IEnumerable<Contract>>(json);
+                    activeContracts = contracts?.Count(c => c.Status == "Active") ?? 0;
+                }
+
+                if (requestsResponse.IsSuccessStatusCode)
+                {
+                    var json = await requestsResponse.Content.ReadAsStringAsync();
+                    var requests = JsonConvert.DeserializeObject<IEnumerable<ServiceRequest>>(json);
+                    totalRequests = requests?.Count() ?? 0;
+                }
+
+                ViewBag.TotalClients = totalClients;
+                ViewBag.ActiveContracts = activeContracts;
+                ViewBag.TotalRequests = totalRequests;
+            }
+            catch
+            {
+                ViewBag.TotalClients = 0;
+                ViewBag.ActiveContracts = 0;
+                ViewBag.TotalRequests = 0;
+            }
 
             return View();
         }

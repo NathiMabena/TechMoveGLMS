@@ -1,49 +1,47 @@
-using Microsoft.EntityFrameworkCore;
-using System;
-using TechMoveGLMS.Data;
-using TechMoveGLMS.Patterns;
 using TechMoveGLMS.Services;
 using TechMoveGLMS.Services.Interfaces;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Read API base URL from config or environment variable
+var apiBaseUrl = builder.Configuration["ApiSettings:BaseUrl"]
+    ?? "https://localhost:7222/";
 
-// Services
-builder.Services.AddScoped<IClientService, ClientService>();
-builder.Services.AddScoped<IContractService, ContractService>();
-builder.Services.AddScoped<IServiceRequestService, ServiceRequestService>();
-
-// Design Patterns
-builder.Services.AddScoped<IPricingStrategy, StandardFreightPricing>();
-builder.Services.AddScoped<IServiceRequestFactory, StandardRequestFactory>();
-
+// HttpClient for currency service
 builder.Services.AddHttpClient<ICurrencyService, CurrencyService>();
 
-// Add services to the container.
+// HttpClient for API calls
+builder.Services.AddHttpClient("GlmsApi", client =>
+{
+    client.BaseAddress = new Uri(apiBaseUrl);
+});
+
+// Session for JWT token storage
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(2);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Auth}/{action=Login}/{id?}");
 
 app.Run();
