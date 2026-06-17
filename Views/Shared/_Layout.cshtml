@@ -1,4 +1,4 @@
-﻿`<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,49 +6,43 @@
     <title>@ViewData["Title"] — TechMove GLMS</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-
-    <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-brand">
             <h4>⚓ TECHM0VE</h4>
             <small>Global Logistics Management</small>
         </div>
 
-        <div class="pt-3">
+        <div class="pt-3 sidebar-nav">
             <div class="nav-section">Main Menu</div>
-
             <a class="nav-link" asp-controller="Home" asp-action="Index">
                 <i class="fas fa-tachometer-alt"></i> Dashboard
             </a>
 
             <div class="nav-section">Management</div>
-
             <a class="nav-link" asp-controller="Client" asp-action="Index">
                 <i class="fas fa-users"></i> Clients
             </a>
-
             <a class="nav-link" asp-controller="Contract" asp-action="Index">
                 <i class="fas fa-file-contract"></i> Contracts
             </a>
-
             <a class="nav-link" asp-controller="ServiceRequest" asp-action="Index">
                 <i class="fas fa-concierge-bell"></i> Service Requests
             </a>
         </div>
+
+        <div class="sidebar-logout p-3">
+            <button type="button" class="btn btn-danger w-100 text-start"
+                    onclick="document.getElementById('logoutForm').submit();">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </button>
+            <form id="logoutForm" asp-controller="Auth" asp-action="Logout"
+                  method="post" style="display:none;"></form>
+        </div>
     </div>
 
-    <div class="mt-auto p-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
-        <a class="nav-link" asp-controller="Auth" asp-action="Logout"
-           style="color:#dc3545;">
-            <i class="fas fa-sign-out-alt me-2"></i>Logout
-        </a>
-    </div>
-
-    <!-- Main Content -->
     <div class="main-content">
         <div class="top-bar">
             <h5>@ViewData["Title"]</h5>
@@ -66,6 +60,5 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
 </body>
 </html>

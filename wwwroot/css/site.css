@@ -395,3 +395,18 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.sidebar-nav {
+    flex: 1;
+}
+
+.sidebar-logout {
+    margin-top: auto;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
